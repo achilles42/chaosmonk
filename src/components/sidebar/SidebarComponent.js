@@ -4,11 +4,8 @@ import { StyleSheet, css } from 'aphrodite';
 import LogoComponent from './LogoComponent';
 import MenuItemComponent from './MenuItemComponent';
 import IconOverview from '../../assets/icon-overview.js';
-import IconTickets from '../../assets/icon-tickets.js';
-import IconIdeas from '../../assets/icon-ideas.js';
-import IconContacts from '../../assets/icon-contacts';
-import IconAgents from '../../assets/icon-agents';
-import IconArticles from '../../assets/icon-articles';
+import IconTeams from '../../assets/icon-contacts';
+import IconServices from '../../assets/icon-articles';
 import IconSettings from '../../assets/icon-settings';
 import IconSubscription from '../../assets/icon-subscription';
 
@@ -40,26 +37,13 @@ function SidebarComponent(props) {
                     active={props.selectedItem === 'Overview'}
                 />
                 <MenuItemComponent
-                    title="Tickets" icon={IconTickets}
-                    onClick={() => props.onChange('Tickets')}
-                    active={props.selectedItem === 'Tickets'}
-                />
+                    title="Teams" icon={IconTeams}
+                    onClick={() => props.onChange('Teams')}
+                    active={props.selectedItem === 'Teams'} />
                 <MenuItemComponent
-                    title="Ideas" icon={IconIdeas}
-                    onClick={() => props.onChange('Ideas')}
-                    active={props.selectedItem === 'Ideas'} />
-                <MenuItemComponent
-                    title="Contacts" icon={IconContacts}
-                    onClick={() => props.onChange('Contacts')}
-                    active={props.selectedItem === 'Contacts'} />
-                <MenuItemComponent
-                    title="Agents" icon={IconAgents}
-                    onClick={() => props.onChange('Agents')}
-                    active={props.selectedItem === 'Agents'} />
-                <MenuItemComponent
-                    title="Articles" icon={IconArticles}
-                    onClick={() => props.onChange('Articles')}
-                    active={props.selectedItem === 'Articles'} />
+                    title="Services" icon={IconServices}
+                    onClick={() => props.onChange('Services')}
+                    active={props.selectedItem === 'Services'} />
                 <div className={css(styles.separator)}></div>
                 <MenuItemComponent
                     title="Settings" icon={IconSettings}
