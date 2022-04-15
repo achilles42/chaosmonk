@@ -18,11 +18,25 @@ const styles = StyleSheet.create({
     menuItemList: {
         marginTop: 52
     },
+    outsideLayer: {
+        position: 'absolute',
+        width: '100vw',
+        minWidth: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0,0,0,.50)',
+        zIndex: 900
+    },
     separator: {
         borderTop: '1px solid #DFE0EB',
         marginTop: 16,
         marginBottom: 16,
         opacity: 0.06
+    },
+    hide: {
+        left: -255
+    },
+    show: {
+        left: 0
     }
 });
 
@@ -34,8 +48,7 @@ function SidebarComponent(props) {
                 <MenuItemComponent
                     title="Overview" icon={IconOverview}
                     onClick={() => props.onChange('Overview')}
-                    active={props.selectedItem === 'Overview'}
-                />
+                    active={props.selectedItem === 'Overview'}/>
                 <MenuItemComponent
                     title="Teams" icon={IconTeams}
                     onClick={() => props.onChange('Teams')}
@@ -59,3 +72,4 @@ function SidebarComponent(props) {
 }
 
 export default SidebarComponent;
+
