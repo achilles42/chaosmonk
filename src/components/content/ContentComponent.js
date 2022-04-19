@@ -2,8 +2,6 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import MiniCardComponent from './MiniCardComponent';
-import TodayTrendsComponent from './TodayTrendsComponent';
-import UnresolvedTicketsComponent from './UnresolvedTicketsComponent';
 // import TasksComponent from './TasksComponent';
 
 const styles = StyleSheet.create({
@@ -31,12 +29,6 @@ const styles = StyleSheet.create({
     lastRow: {
         marginTop: 30
     },
-    unresolvedTickets: {
-        marginRight: 30,
-        '@media (max-width: 1024px)': {
-            marginRight: 0
-        }
-    },
     tasks: {
         marginTop: 0,
         '@media (max-width: 1024px)': {
@@ -50,8 +42,8 @@ function ContentComponent() {
         <Column>
             <Row className={css(styles.cardsContainer)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>
                 <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Teams" value="60" />
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Services" value="16" />
+                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Teams" value="6" />
+                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Services" value="124" />
                 </Row>
                 <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
                     <MiniCardComponent className={css(styles.miniCardContainer)} title="Alerts Triggered" value="43" />
